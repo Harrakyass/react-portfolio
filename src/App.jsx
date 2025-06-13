@@ -13,6 +13,8 @@ function App() {
  return (
    <>
       <Intro />
+      <Navbar />
+      <br/>
       <Footer />
    </>
     

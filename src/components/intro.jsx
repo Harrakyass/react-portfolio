@@ -7,7 +7,7 @@ export default function Intro() {
 
 
     return (
-        <section className="intro">
+        <section className="header">
             <h3>{welcome}</h3>
             <h1>{name}</h1>
             <h2>{slogan}</h2>
