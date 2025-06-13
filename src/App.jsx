@@ -6,11 +6,14 @@ import Intro from './components/intro';
 import Navbar from './components/navbar';
 import About from './components/about';
 import Projects from './components/projects';
+import Experience from './components/experience';
+import Footer from './components/footer';
 
 function App() {
  return (
    <>
       <Intro />
+      <Footer />
    </>
     
  )
