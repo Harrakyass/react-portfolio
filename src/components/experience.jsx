@@ -11,7 +11,7 @@ export default function Experience () {
 
     return (
         <>
-            <div className="experience">
+            <div className="">
                 <h2>Experience</h2>
             </div>
             {

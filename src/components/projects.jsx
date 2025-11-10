@@ -2,6 +2,7 @@ import React from 'react';
 import pomodoro from '../assets/screenshot.png';
 import todoList from '../assets/todo-list.png';
 import suptem from '../assets/suptem.png';
+import quotes from '../assets/quotes.png';
 
 
 export default function Projects() {
@@ -23,6 +24,14 @@ export default function Projects() {
             description: "A task management app allowing users to add, edit, and remove tasks with local storage functionality."
         },
 
+        quoteGenerator: {
+            src: quotes,
+            alt: "Quote generator screenshot",
+            title: "Quote Generator",
+            href: "https://harrakyass.github.io/quote_generator/",
+            description: "A minimalist and elegant quote generator built with React and Vite. "
+        },
+
         suptem: {
             src: suptem,
             alt: "suptembmhs.com Screenshot",
@@ -33,8 +42,8 @@ export default function Projects() {
     };
 
     return (
-        <>
-            <article>
+        <div id="">
+            <article className="">
                 <div>
                     <h2>Projects</h2>
                     <p>{projectSummary}</p>
@@ -58,6 +67,6 @@ export default function Projects() {
                 </div>
                 
             </article>
-        </>
+        </div>
     )
 }
