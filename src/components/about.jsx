@@ -14,7 +14,7 @@ export default function About() {
 
     return (
         <div className="border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25">
-            <div className="flex  justify-center text-[25px] text-accent  md:text-[35px] mt-4">
+            <div className="section-title">
                 <h2 >About me</h2>
             </div>
             <div className="flex items-center justify-around">
@@ -34,7 +34,7 @@ export default function About() {
 
                     
                 </div>
-                <img className="hidden md:block rounded-full m-10 w-80 h-80" src={profile.src} alt={profile.alt}/>
+                <img className="hidden md:block rounded-full m-10 md:w-60 md:h-60  lg:w-80 lg:h-80" src={profile.src} alt={profile.alt}/>
             </div>
            
         </div>

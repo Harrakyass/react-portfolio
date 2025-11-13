@@ -9,6 +9,7 @@ export default function Intro() {
 
 
     return (
+        
         <div className="flex flex-col items-center">
         
         <section className="font-poppins text-primary flex flex-col items-center mb-5 md:mb-10">

@@ -14,7 +14,7 @@ export default function Navbar() {
 
 
   return (
-    <nav className="font-poppins flex justify-between px-5 md:px-0 md:justify-around items-center bg-secondary text-primary">
+    <nav className="font-poppins flex justify-between px-5 md:px-0 md:justify-around items-center bg-secondary text-primary sticky top-0 z-50">
       <div className="flex items-center">
         <div className="w-20 h-20 md:w-25 md:h-25">
           <a href="#"><img src={backrgroundImg} alt="black-white.png"/></a>

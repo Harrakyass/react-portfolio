@@ -14,3 +14,12 @@
 .hover {
     @apply hover:text-accent transition ease-linear duration-400;
 }
+
+.section-title {
+    @apply flex  justify-center text-[25px] text-accent  md:text-[35px] mt-4;
+}
+
+.section-border {
+    @apply border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25;
+}
+

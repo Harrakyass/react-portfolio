@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
 import pomodoro from '../assets/screenshot.png';
 import todoList from '../assets/todo-list.png';
 import suptem from '../assets/suptem.png';
@@ -12,7 +16,8 @@ export default function Projects() {
             src: pomodoro,
             alt: "Pomodoro App Screenshot",
             title: "Pomodoro App",
-            href: "https://harrakyass.github.io/pomodoro-app/",
+            liveLink: "https://harrakyass.github.io/pomodoro-app/",
+            repoLink: "https://github.com/Harrakyass/pomodoro-app",
             description: "A productivity app designed to help users manage time effectively with the Pomodoro technique."
         },
 
@@ -20,7 +25,8 @@ export default function Projects() {
             src: todoList,
             alt: "Todo List App Screenshot",
             title: "Todo List",
-            href: "https://harrakyass.github.io/to-do-list/",
+            liveLink: "https://harrakyass.github.io/to-do-list/",
+            repoLink: "https://github.com/Harrakyass/to-do-list",
             description: "A task management app allowing users to add, edit, and remove tasks with local storage functionality."
         },
 
@@ -28,7 +34,8 @@ export default function Projects() {
             src: quotes,
             alt: "Quote generator screenshot",
             title: "Quote Generator",
-            href: "https://harrakyass.github.io/quote_generator/",
+            liveLink: "https://harrakyass.github.io/quote_generator/",
+            repoLink: "https://github.com/Harrakyass/quote_generator",
             description: "A minimalist and elegant quote generator built with React and Vite. "
         },
 
@@ -36,37 +43,27 @@ export default function Projects() {
             src: suptem,
             alt: "suptembmhs.com Screenshot",
             title: "Suptem Bmhs Website",
-            href: "https://suptembmhs.com/",
+            liveLink: "https://suptembmhs.com/",
             description: "A dynamic school website built with WordPress, featuring SEO optimization and responsive design."
         }
     };
 
     return (
-        <div id="">
-            <article className="">
-                <div>
+        <div className="section-border">
+                <div className="section-title">
                     <h2>Projects</h2>
-                    <p>{projectSummary}</p>
                 </div>
-                <div>
-                    {
-                        Object.entries(projects).map(
-                            ([key, value]) => {
-                                return (
-                                    <div key={key}>
-                                        <img src={value.src}/>
-                                        <div>
-                                            <a href={value.href} target="_blank"><h3>{value.title}</h3></a>
-                                            <p>{value.description}</p>
-                                        </div>
-                                    </div>
-                                )  
-                            }
-                        )
-                    }
+                <div className="flex items-center justify-around">
+                    <div className="flex flex-col items-center lg:mb-8 lg:ml-8 text-primary text-[12px] p-10">
+                        <p>{projectSummary}</p>
+                    </div>
+                    <div className="">
+                        <p>the carousel will be here</p>
+                    </div>
+                    
                 </div>
                 
-            </article>
+                
         </div>
     )
 }
