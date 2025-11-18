@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 const experiences = [
     {
         companyName: "Suptem BMHS",
-        title: "Web Development Intern @",
+        title: "Web Development Intern ",
         linkedIn: "https://www.linkedin.com/company/suptem/",
         period: "Aug 2024 - Oct 2024",
         tasks: [
@@ -16,7 +16,7 @@ const experiences = [
     },
     {
         companyName: "RHCPMA",
-        title: "Web Development Intern @",
+        title: "Web Development Intern ",
         linkedIn: "https://www.linkedin.com/company/rhcpma/",
         period: "Jun 2025 - Sep 2025",
         tasks: [
@@ -24,40 +24,49 @@ const experiences = [
             "Implemented an access control system with client accounts and time-limited file submission.",
             "Designed an admin dashboard to manage users, submission periods, and received documents."
         ]
-    }
+    },
+    
 ];
 
 
 
 
 export default function Experience () {
+    const [tab, setTab] = useState(0);
     
     return (
-        <div className="">
-            <div className="section-title">
+        <div className="section-border p-10">
+            <div className="flex  justify-center text-[25px] text-accent  md:text-[35px] mb-8">
                 <h2>Experience</h2>
             </div>
             <div>
-                {
-                    experiences.map((experience, index) => (
-                        <div key={index}>
-                            <div>
-                                <h3>{experience.companyName}</h3>
+                        <div className="grid md:grid-cols-3 gap-10 md:gap-20 justify-center text-primary " >
+                            <div className="flex flex-col" >
+                                {
+                                    experiences.map((company, index) => {
+
+                                        return (
+                                            <button key={index} className={`py-4 px-6 text-left   font-bold ${tab === index ? 'active-tab' : 'inactive-tab'} `} onClick={() => setTab(index)}>{company.companyName}</button>
+                                        )
+                                    })
+                                }
                             </div>
-                            <div>
-                                <h2>{experience.title} @{experience.companyName}</h2>
-                                <h4>{experience.period}</h4>
+                            <div className="col-span-2">
+                                <h2 className="text-accent font-bold text-[22px]">
+                                    {experiences[tab].title} 
+                                    <span className="italic font-normal">@{experiences[tab].companyName}</span>
+                                </h2>
+                                <h4 className="text-[18px] uppercase mb-4">{experiences[tab].period}</h4>
                                 <ul>
-                                    {experience.tasks.map((task,taskIndex)=> (
-                                        <li key={taskIndex}><FontAwesomeIcon className="text-accent" icon={faCaretRight} /> {task}</li>
+                                    {experiences[tab].tasks.map((task, taskIndex) => (
+                                        <li key={taskIndex} className="text-[15px] mb-2">
+                                            <FontAwesomeIcon className="text-accent" icon={faCaretRight} /> {task}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
+                            
                         </div>
-                        
-                    ))
-                }
-
             </div>
         </div>
     )

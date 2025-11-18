@@ -20,7 +20,7 @@ export default function Intro() {
         <section>
             <button>
                 <a href="mailto:yassir.ch213@gmail.com" target="_blank" rel="noreferrer">
-                    <div className="flex py-4 px-2 text-[15px] md:py-6 md:px-4 items-center text-accent md:text-[25px] border border-accent rounded-md hover:bg-accent hover:text-primary transition ease-linear duration-400">
+                    <div className="flex py-4 px-2 text-[15px] md:py-6 md:px-4 items-center text-accent md:text-[25px] border border-accent rounded-md hover:bg-primary hover:text-secondary transition ease-linear duration-400">
                         <FontAwesomeIcon icon={faEnvelope} />
                         <p className="ml-2">Let's Connect</p>
                     </div>

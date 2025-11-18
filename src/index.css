@@ -23,3 +23,10 @@
     @apply border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25;
 }
 
+.active-tab {
+    @apply text-accent border-r-3 border-accent;
+}
+.inactive-tab {
+    @apply text-primary  border-primary;
+}
+
