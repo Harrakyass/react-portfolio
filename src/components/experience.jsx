@@ -4,7 +4,7 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 const experiences = [
     {
-        companyName: "Suptem BMHS",
+        companyName: "Suptem",
         title: "Web Development Intern ",
         linkedIn: "https://www.linkedin.com/company/suptem/",
         period: "Aug 2024 - Oct 2024",
@@ -40,13 +40,13 @@ export default function Experience () {
                 <h2>Experience</h2>
             </div>
             <div>
-                        <div className="grid md:grid-cols-3 gap-10 md:gap-20 justify-center text-primary " >
+                        <div className="grid md:grid-cols-3  md:gap-20 justify-center text-primary " >
                             <div className="flex flex-col" >
                                 {
                                     experiences.map((company, index) => {
 
                                         return (
-                                            <button key={index} className={`py-4 px-6 text-left   font-bold ${tab === index ? 'active-tab' : 'inactive-tab'} `} onClick={() => setTab(index)}>{company.companyName}</button>
+                                            <button key={index} className={`py-4 px-6 text-left cursor-pointer  font-bold ${tab === index ? 'active-tab' : 'inactive-tab'} `} onClick={() => setTab(index)}>{company.companyName}</button>
                                         )
                                     })
                                 }
@@ -54,7 +54,7 @@ export default function Experience () {
                             <div className="col-span-2">
                                 <h2 className="text-accent font-bold text-[22px]">
                                     {experiences[tab].title} 
-                                    <span className="italic font-normal">@{experiences[tab].companyName}</span>
+                                    <span className="italic font-normal">@<a href={experiences[tab].linkedIn} target="_blank" rel="noopener noreferrer">{experiences[tab].companyName}</a></span>
                                 </h2>
                                 <h4 className="text-[18px] uppercase mb-4">{experiences[tab].period}</h4>
                                 <ul>
