@@ -14,8 +14,8 @@ export default function Intro() {
         
         <section className="font-poppins text-primary flex flex-col items-center mb-5 md:mb-10">
             <p className="text-[28px] md:text-[40px]">{welcome}</p>
-            <p className="text-[35] md:text-[45px]"><span className="font-bold text-accent">{`${name}`}</span>'s Portfolio</p>
-            <p className="text-[33] font-light italic text-accent md:text-[43px] ">{slogan}</p>
+            <p className="text-[35px] md:text-[45px]"><span className="font-bold text-accent">{`${name}`}</span>'s Portfolio</p>
+            <p className="text-[33px] font-light italic text-accent md:text-[43px] ">{slogan}</p>
         </section>
         <section>
             <button>
