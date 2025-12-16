@@ -19,7 +19,7 @@ export default function About() {
             </div>
             <div className="flex items-center justify-around">
                 <div className="flex flex-col items-center lg:mb-8 lg:ml-8"> 
-                    <div className="text-primary text-[12px] lg:text-[15px] p-10">
+                    <div className="text-primary text-[10px] md:text-[12px] lg:text-[15] p-10">
                         <p className="">{aboutMeP}</p>
                         <h3 className="mt-3 mb-2">Here are some technologies I have been working with:</h3>
                         <ul className="grid grid-cols-2 lg:grid-cols-3 ">

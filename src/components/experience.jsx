@@ -51,15 +51,15 @@ export default function Experience () {
                                     })
                                 }
                             </div>
-                            <div className="col-span-2">
-                                <h2 className="text-accent font-bold text-[22px]">
+                            <div className="col-span-2 mt-3">
+                                <h2 className="text-accent font-bold text-[20px]">
                                     {experiences[tab].title} 
                                     <span className="italic font-normal">@<a href={experiences[tab].linkedIn} target="_blank" rel="noopener noreferrer">{experiences[tab].companyName}</a></span>
                                 </h2>
-                                <h4 className="text-[18px] uppercase mb-4">{experiences[tab].period}</h4>
+                                <h4 className="text-[15px] uppercase mb-4">{experiences[tab].period}</h4>
                                 <ul>
                                     {experiences[tab].tasks.map((task, taskIndex) => (
-                                        <li key={taskIndex} className="text-[15px] mb-2">
+                                        <li key={taskIndex} className="text-[12px] mb-2">
                                             <FontAwesomeIcon className="text-accent" icon={faCaretRight} /> {task}
                                         </li>
                                     ))}
