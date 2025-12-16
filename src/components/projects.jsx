@@ -65,16 +65,20 @@ export default function Projects() {
                     <div className="hidden md:block flex flex-col items-center lg:mb-8 lg:ml-8 text-primary text-[12px] p-10">
                         <p>{projectSummary}</p>
                     </div>
-                    <div className="w-full max-w-sm md:max-w-md lg:max-w-lg mx-4 my-4 md:mx-10 lg:mx-20">
+                    
+
+                    <div className="w-full max-w-sm md:max-w-md lg:max-w-lg px-4 my-4 mx-auto overflow-hidden">
                         <Swiper
                         modules={[Navigation, Pagination]}
                         spaceBetween={50}
                         slidesPerView={1}
                         navigation
                         pagination={{ clickable: true }}
+                        resistanceRatio={0}
+                        touchReleaseOnEdges={true}
                         className="h-64  rounded-[50px]  "
                         >   
-                            <SwiperSlide className="relative h-64 overflow-hidden rounded-[50px]">
+                            <SwiperSlide className="relative h-64 overflow-hidden rounded-[20px]">
                                 <img src={projects.pomodoro.src} alt={projects.pomodoro.alt} className="absolute inset-0 w-full h-full object-cover"/>
                                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white rounded-2xl px-4 py-3 w-[85%] max-w-xs text-center shadow-lg">
                                     <h3 className="text-[12px] text-accent font-bold">{projects.pomodoro.title}</h3>

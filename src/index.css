@@ -11,6 +11,10 @@
     --font-poppins: 'Poppins', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .hover {
     @apply hover:text-accent transition ease-linear duration-400;
 }
@@ -20,8 +24,9 @@
 }
 
 .section-border {
-    @apply border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25;
+    @apply border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-4 md:mx-25 overflow-hidden;
 }
+
 
 .active-tab {
     @apply text-accent border-r-3 border-accent;
