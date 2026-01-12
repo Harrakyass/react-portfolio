@@ -57,12 +57,12 @@ export default function Projects() {
     };
 
     return (
-        <div className="section-border">
+        <div id="Projects" className="section-border">
                 <div className="section-title">
                     <h2>Projects</h2>
                 </div>
-                <div className="flex items-center justify-around">
-                    <div className="hidden md:block flex flex-col items-center lg:mb-8 lg:ml-8 text-primary text-[12px] p-10">
+                <div className="flex items-center justify-around gap-8">
+                    <div className="hidden md:flex flex-col w-full md:max-w-md lg:max-w-lg text-primary text-[12px] p-10">
                         <p>{projectSummary}</p>
                     </div>
                     

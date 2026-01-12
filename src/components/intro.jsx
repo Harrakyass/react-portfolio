@@ -11,11 +11,11 @@ export default function Intro() {
    return (
     <div className="flex flex-col justify-center items-center">
         <section className="font-poppins text-primary flex flex-col items-center mb-5 md:mb-10 text-center">
-            <p className="text-[28px] md:text-[40px]">{welcome}</p>
-            <p className="text-[35px] md:text-[45px]">
+            <p className="text-[23px] md:text-[40px]">{welcome}</p>
+            <p className="text-[30px] md:text-[45px]">
                 <span className="font-bold text-accent">{`${name}`}</span>'s Portfolio
             </p>
-            <p className="text-[33px] font-light italic text-accent md:text-[43px]">{slogan}</p>
+            <p className="text-[28px] font-light italic text-accent md:text-[43px]">{slogan}</p>
         </section>
         
         <section>

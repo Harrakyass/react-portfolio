@@ -35,12 +35,12 @@ export default function Experience () {
     const [tab, setTab] = useState(0);
     
     return (
-        <div className="section-border p-10">
+        <div id="Experience" className="section-border p-10">
             <div className="flex  justify-center text-[25px] text-accent  md:text-[35px] mb-8">
                 <h2>Experience</h2>
             </div>
             <div>
-                        <div className="grid md:grid-cols-3  md:gap-20 justify-center text-primary " >
+                        <div className="grid lg:grid-cols-3  lg:gap-20 justify-center text-primary " >
                             <div className="flex flex-col" >
                                 {
                                     experiences.map((company, index) => {

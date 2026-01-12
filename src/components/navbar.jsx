@@ -24,7 +24,7 @@ export default function Navbar() {
           <ul className="flex">
             {
               mainNav.map((value, key) => 
-                <li key={key} className="ml-10  hover"><a href={`#${value}`} target="_blank" rel="noopener noreferrer">{value}</a></li>
+                <li key={key} className="ml-10  hover"><a href={`#${value}`} >{value}</a></li>
               ) 
             }
           </ul>

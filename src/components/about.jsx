@@ -13,7 +13,7 @@ export default function About() {
     }
 
     return (
-        <div className="border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25">
+        <div id="About Me" className="border border-primary border-3 rounded-[100px] md:rounded-[113px] mx-10 md:mx-25">
             <div className="section-title">
                 <h2 >About me</h2>
             </div>

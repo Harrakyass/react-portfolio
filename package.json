@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "react-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.3",
-    "@mui/icons-material": "^7.1.1",
-    "@mui/material": "^7.1.1",
     "@tailwindcss/vite": "^4.1.17",
     "bootstrap": "^5.3.8",
     "react": "^19.1.0",
