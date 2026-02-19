@@ -2,133 +2,126 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 import pomodoro from '../assets/screenshot.png';
 import todoList from '../assets/todo-list.png';
 import suptem from '../assets/suptem.png';
 import quotes from '../assets/quotes.png';
 
-
 export default function Projects() {
-    const projectSummary = "I take pride in developing creative and functional web applications that showcase my skills in front-end and full-stack development. Each project highlights a unique aspect of my expertise, from dynamic, responsive designs to robust back-end functionality. Whether it’s creating a portfolio website, a productivity tool, or an engaging user experience, my work is driven by a commitment to innovation and usability. Below are a few of my projects that demonstrate my dedication to crafting effective and user-friendly solutions. ";
-    const projects = {
-        pomodoro: {
+    const projectSummary = "I take pride in developing creative and functional web applications that showcase my skills in front-end and full-stack development. Each project highlights a unique aspect of my expertise, from dynamic designs to robust functionality.";
+
+    const projects = [
+        {
+            id: 'pomodoro',
             src: pomodoro,
-            alt: "Pomodoro App Screenshot",
             title: "Pomodoro App",
             liveLink: "https://harrakyass.github.io/pomodoro-app/",
             repoLink: "https://github.com/Harrakyass/pomodoro-app",
-            description: "A productivity app designed to help users manage time effectively with the Pomodoro technique."
+            description: "A productivity powerhouse with custom timers and session tracking.",
+            tech: ["JavaScript", "HTML5", "CSS3"],
+            featured: true // This will make the card larger
         },
-
-        todoList: {
+        {
+            id: 'suptem',
+            src: suptem,
+            title: "Suptem Bmhs",
+            liveLink: "https://suptembmhs.com/",
+            repoLink: null,
+            description: "Full-scale university website with SEO and performance optimization.",
+            tech: ["WordPress", "SEO", "UI/UX"],
+            featured: false
+        },
+        {
+            id: 'todoList',
             src: todoList,
-            alt: "Todo List App Screenshot",
-            title: "Todo List",
+            title: "Task Master",
             liveLink: "https://harrakyass.github.io/to-do-list/",
             repoLink: "https://github.com/Harrakyass/to-do-list",
-            description: "A task management app allowing users to add, edit, and remove tasks with local storage functionality."
+            description: "Advanced task management with persistent local storage.",
+            tech: ["JavaScript", "HTML5", "CSS3"],
+            featured: false
         },
-
-        quoteGenerator: {
+        {
+            id: 'quoteGenerator',
             src: quotes,
-            alt: "Quote generator screenshot",
-            title: "Quote Generator",
+            title: "Inspo Quotes",
             liveLink: "https://harrakyass.github.io/quote_generator/",
             repoLink: "https://github.com/Harrakyass/quote_generator",
-            description: "A minimalist and elegant quote generator built with React and Vite. "
+            description: "Minimalist generator fetching API data with elegant transitions.",
+            tech: ["React", "TailwindCSS", "Vite"],
+            featured: false
         },
-
-        suptem: {
-            src: suptem,
-            alt: "suptembmhs.com Screenshot",
-            title: "Suptem Bmhs Website",
-            liveLink: "https://suptembmhs.com/",
-            description: "A dynamic school website built with WordPress, featuring SEO optimization and responsive design."
-        }
-    };
+        
+    ];
 
     return (
-        <div id="Projects" className="section-border">
-                <div className="section-title">
-                    <h2>Projects</h2>
-                </div>
-                <div className="flex items-center justify-around gap-8">
-                    <div className="hidden md:flex flex-col w-full md:max-w-md lg:max-w-lg text-primary text-[12px] p-10">
-                        <p>{projectSummary}</p>
+        <div id="Projects" className=" bg-secondary/5 py-16 px-6 md:px-12 lg:px-24">
+            {/* Header Section */}
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div className="max-w-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                        <div className="h-1 w-12 bg-accent rounded-full"></div>
+                        <span className="text-accent uppercase tracking-[0.3em] text-xs font-bold">Portfolio</span>
                     </div>
-                    
+                    <h2 className="text-primary text-4xl md:text-5xl font-bold mb-6">Featured Projects</h2>
+                    <p className="text-primary/70 text-sm md:text-base leading-relaxed italic border-l-2 border-accent/30 pl-4">
+                        "{projectSummary}"
+                    </p>
+                </div>
+            </div>
 
-                    <div className="w-full max-w-sm md:max-w-md lg:max-w-lg px-4 my-4 mx-auto overflow-hidden">
-                        <Swiper
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}
-                        resistanceRatio={0}
-                        touchReleaseOnEdges={true}
-                        className="h-64  rounded-[50px]  "
-                        >   
-                            <SwiperSlide className="relative h-64 overflow-hidden rounded-[20px]">
-                                <img src={projects.pomodoro.src} alt={projects.pomodoro.alt} className="absolute inset-0 w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white rounded-2xl px-4 py-3 w-[85%] max-w-xs text-center shadow-lg">
-                                    <h3 className="text-[12px] text-accent font-bold">{projects.pomodoro.title}</h3>
-                                    <p className="text-[10px] ">{projects.pomodoro.description}</p>
-                                    <div className="flex justify-center gap-3 mt-2 text-[10px]">
-                                        <a href={projects.pomodoro.repoLink} target="_blank" className="hover"><FontAwesomeIcon icon={faGithub} /></a>
-                                        <a href={projects.pomodoro.liveLink} target="_blank" className="hover"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
-                                    </div>
-                                </div>
-                                
-                            </SwiperSlide>
-                            <SwiperSlide  className="relative h-64 overflow-hidden rounded-[50px]">
-                                <img src={projects.todoList.src} alt={projects.todoList.alt} className="absolute inset-0 w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white rounded-2xl px-4 py-3 w-[85%] max-w-xs text-center shadow-lg">
-                                    <h3 className="text-[12px] text-accent font-bold">{projects.todoList.title}</h3>
-                                    <p className="text-[10px]">{projects.todoList.description}</p>
-                                    <div className="flex justify-center gap-3 mt-2 text-[10px] ">
-                                        <a href={projects.todoList.repoLink} target="_blank" className="hover"><FontAwesomeIcon icon={faGithub} /></a>
-                                        <a href={projects.todoList.liveLink} target="_blank" className="hover"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="relative h-64 overflow-hidden rounded-[50px]">
-                               <img src={projects.quoteGenerator.src} alt={projects.quoteGenerator.alt} className="absolute inset-0 w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white rounded-2xl px-4 py-3 w-[85%] max-w-xs text-center shadow-lg">
-                                    <h3 className="text-[12px] text-accent font-bold">{projects.quoteGenerator.title}</h3>
-                                    <p className="text-[10px]">{projects.quoteGenerator.description}</p>
-                                    <div className="flex justify-center gap-3 mt-2 text-[10px] ">
-                                        <a href={projects.quoteGenerator.repoLink} target="_blank" className="hover"><FontAwesomeIcon icon={faGithub} /></a>
-                                        <a href={projects.quoteGenerator.liveLink} target="_blank" className="hover"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="relative h-64 overflow-hidden rounded-[50px]">
-                                <img src={projects.suptem.src} alt={projects.suptem.alt} className="absolute inset-0 w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-white rounded-2xl px-4 py-3 w-[85%] max-w-xs text-center shadow-lg">
-                                    <h3 className="text-[12px] text-accent font-bold">{projects.suptem.title}</h3>
-                                    <p className="text-[10px]">{projects.suptem.description}</p>
-                                    <div className="flex justify-center gap-3 mt-2 text-[10px] ">
-                                        <a href="#" target="_blank" className="hover"><FontAwesomeIcon icon={faGithub} /></a>
-                                        <a href={projects.suptem.liveLink} target="_blank" className="hover"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
+            {/* The Bento Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+                {projects.map((project, index) => (
+                    <div 
+                        key={project.id} 
+                        className={`group relative overflow-hidden rounded-[32px] border border-white/10 bg-secondary shadow-2xl transition-all duration-500 hover:-translate-y-2
+                            ${project.featured ? 'md:col-span-6 lg:col-span-8 h-[400px]' : 'md:col-span-3 lg:col-span-4 h-[400px]'}`}
+                    >
+                        {/* Project Image with Overlay */}
+                        <div className="absolute inset-0 z-0">
+                            <img 
+                                src={project.src} 
+                                alt={project.title} 
+                                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/20 to-transparent"></div>
+                        </div>
+
+                        {/* Content Overlay */}
+                        <div className="absolute inset-0 z-10 p-8 flex flex-col justify-end">
+                            <div className="flex flex-wrap gap-2 mb-4 transition-transform duration-500 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100">
+                                {project.tech.map((t) => (
+                                    <span key={t} className="px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/30 text-accent text-[10px] rounded-full font-bold uppercase tracking-wider">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <h3 className="text-primary text-2xl font-bold mb-2 transform transition-transform duration-500 group-hover:-translate-y-1">
+                                {project.title}
+                            </h3>
+                            
+                            <p className="text-primary/70 text-sm mb-6 line-clamp-2 transform transition-transform duration-500 group-hover:-translate-y-1">
+                                {project.description}
+                            </p>
+
+                            <div className="flex items-center gap-6">
+                                {project.repoLink && (
+                                    <a href={project.repoLink} target="_blank" rel="noreferrer" className="text-primary/60 hover:text-accent transition-colors text-xl">
+                                        <FontAwesomeIcon icon={faGithub} />
+                                    </a>
+                                )}
+                                <a href={project.liveLink} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-accent font-bold text-sm group/link">
+                                    <span>View Project</span>
+                                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    
-                </div>
-                
-                
+                ))}
+            </div>
         </div>
-    )
+    );
 }

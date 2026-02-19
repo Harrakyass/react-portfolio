@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <div className="bg-secondary text-primary flex flex-col items-center">
             <div className="font-sm flex flex-col md:flex-row">
-                <p>Built by {ownerName}.</p>
+                <p>Built by <a href="https://www.linkedin.com/in/cherifharrakyasser/" className="text-accent">{ownerName}</a>.</p>
                 <p className="ml-2 mb-2">{copyrightNotice} &copy;{currentYear}  </p>
             </div>
             <div>
