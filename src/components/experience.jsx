@@ -25,6 +25,17 @@ const experiences = [
             "Designed a clean admin dashboard for user and document management."
         ]
     },
+    {
+        companyName: "Standard Profil Morocco",
+        title: "Web Development Intern",
+        linkedIn: "https://www.linkedin.com/company/rhcpma/",
+        period: "Dec 2025 - Now",
+        tasks: [
+            "Developed a comprehensive Employee Management System using ASP.NET Core MVC and SQL Server, including profile management, document generation, and role-based access control.",
+            "Implemented dynamic CRUD operations and user interfaces with custom JavaScript and CSS.",
+            "Ensured data integrity and security through robust validation, authorization policies, and audit trails."
+        ]
+    }
 ];
 
 export default function Experience () {

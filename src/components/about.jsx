@@ -16,7 +16,7 @@ export default function About() {
                     <div className="absolute -inset-4 bg-accent/20 rounded-[40px] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     <div className="relative overflow-hidden rounded-[40px] border-2 border-white/10 shadow-2xl">
                         <img 
-                            className="w-64 h-64 md:w-80 md:h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" 
+                            className="w-64 h-64 md:w-80 md:h-80 object-cover lg:grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" 
                             src={profileImg} 
                             alt="Profile"
                         />
